@@ -15,15 +15,17 @@ x.remove(max(x))
 print(max(x))
 
 #find 1st & 2nd largest without using sort
-
-z=[67,99,23,89,100,98]
-max1=max2=z[0]
+z=[390,99,23,89,899,100,98,900]
+max1=max2=0
 for i in range(len(z)):
     if max1<z[i]:
-        max2=max1
         max1=z[i]
-    elif (max2<z[i] and max1>z[i]):
-        max2=z[i]
+for j in range(len(z)):
+    if max2<z[j]:
+        if max1!=z[j]:
+            max2=z[j]
 print(max1)
 print(max2)
+
+
 
